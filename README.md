@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "https://github.com/petzsch/swagger-btcpayserver-php-client.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "petzsch/swagger-btcpayserver-php-client": "*@dev"
   }
 }
 ```
@@ -63,6 +63,7 @@ $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');// Configure HTTP basic authorization: Basic
 $config = Swagger\Client\Configuration::getDefaultConfiguration()
     ->setUsername('YOUR_USERNAME')
+    ->setHost('https://your-btcpay-server:443')
     ->setPassword('YOUR_PASSWORD');
 
 $apiInstance = new Swagger\Client\Api\APIKeysApi(
